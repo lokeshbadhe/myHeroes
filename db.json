@@ -1,0 +1,25 @@
+{
+  "signup": [
+    {
+      "first": "loki",
+      "last": "varma",
+      "email": "loki@gmail.com",
+      "password": "loki",
+      "id": 1
+    },
+    {
+      "first": "rama",
+      "last": "krishna",
+      "email": "krishna@gmail.com",
+      "password": "krishna",
+      "id": 2
+    },
+    {
+      "first": "Pavlo",
+      "last": "pavlo",
+      "email": "pavlo@gmail.com",
+      "password": "pavlo",
+      "id": 3
+    }
+  ]
+}

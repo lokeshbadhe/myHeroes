@@ -1,0 +1,21 @@
+
+<div class="d-flex justify-content-center" style="padding-top: 10px;">
+
+    <form #userLogIn="ngForm" class="form" (ngSubmit)="logIn(userLogIn.value)">
+        <p class="title">Login </p>
+        <p class="message">Login now and get full access to our app. </p>
+        <p style="color: brown;">{{authError}}</p>    
+        <label>
+            <input class="input" type="email" placeholder="" required="" ngModel name="email">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input class="input" type="password" placeholder="" required="" ngModel name="password">
+            <span>Password</span>
+        </label>
+        <button class="submit">Submit</button>
+        <p class="signin">Don't have an acount ? <a href="signup">SignUp</a> </p>
+    </form>
+    </div>
+    
