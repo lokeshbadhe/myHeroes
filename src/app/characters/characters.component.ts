@@ -9,8 +9,9 @@ import { UserService } from '../services/user.service';
 export class CharactersComponent implements OnInit {
   defaultImage: string = '/assets/noimage.jpg'; 
   superheroes: any[] = []; 
+  
 
-constructor(private superheroService:UserService){}
+constructor(private superheroService:UserService,){}
 ngOnInit(): void {
   this.superheroService.getAllSuperheroesData().subscribe(
     (superheroesData) => {
@@ -22,4 +23,7 @@ ngOnInit(): void {
     }
   );
 }
+
+
+
 }

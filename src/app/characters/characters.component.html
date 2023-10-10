@@ -11,25 +11,22 @@
     <div class="col-md-3" *ngFor="let superhero of superheroes">
       <div class="card mb-3" style="width: 18rem;">
         <!-- Loader -->
-        <div *ngIf="!superhero; else superheroData">
+        <div *ngIf="superhero === null; else superheroData">
           <div class="card-body text-center">
             <div class="spinner-border" role="status">
-              <span class="visually-hidden" style="color: black;">Loading...</span>
+              <span class="visually-hidden">Loading...</span>
             </div>
           </div>
         </div>
+        <!-- Superhero data once loaded -->
         <ng-template #superheroData>
+          <!-- Check if superhero is defined before accessing properties -->
           <ng-container *ngIf="superhero">
-            <img [src]="superhero.image?.url || defaultImage" class="card-img-top" alt="/assets/images/noimage.jpg" style="height: 14rem;">
+            <img [src]="superhero.image?.url || defaultImage" class="card-img-top" [alt]="defaultImage" style="height: 14rem;">
             <div class="card-body">
               <p class="card-text text-center">ID: {{ superhero.id }}</p>
-
               <h5 class="card-title text-center" style="font-family: Varela Round;">Name : {{ superhero.name }}</h5>
-              <!-- <p class="card-text text-center">Full Name : {{ superhero.biography.full-name }}</p> -->
-              <p class="card-text text-center">Intelligence: {{ superhero.powerstats?.intelligence }}</p>
-              <p class="card-text text-center">strength: {{ superhero.powerstats?.strength }}</p>
-
-           
+              <!-- Add more data fields as needed -->
               <button type="button" class="btn btn-primary" (click)="openModal(superhero)">More Info</button>
             </div>
           </ng-container>
