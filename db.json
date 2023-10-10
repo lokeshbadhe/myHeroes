@@ -20,6 +20,13 @@
       "email": "pavlo@gmail.com",
       "password": "pavlo",
       "id": 3
+    },
+    {
+      "first": "srikanth",
+      "last": "k",
+      "email": "srikanth@gmail.com",
+      "password": "srikanth",
+      "id": 4
     }
   ]
 }
